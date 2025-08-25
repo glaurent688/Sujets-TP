@@ -24,7 +24,7 @@ La première partie est utilisée pour l'installation à partir de l'image `node
 
 Pour voir la différence, remplacez `FROM gcr.io/distroless/nodejs22-debian12` par `FROM node:22`. Dans le fichier `dockerhub.yml`, à la dernière ligne, remplacez le tag pour différencier les deux images. Poussez dans Git et, une fois l'image disponible dans Docker Hub, effectuez un pull de la nouvelle image et lancez l'analyse dans Docker Desktop. On voit de nombreuses vulnérabilités dans l'image de base.
 
-## Bonnes et Mauvaise pratiques
+## Bonnes et Mauvaises pratiques
 1. *Moindre privilége*: 
 Dans une image distoless on va retrouver l'utilisateur 0 (root) et l'utilisateur 65532 (non-root).
 Dans la premiére partie on nomme l'utilisateur non-root propriétaire ('chown 65532') du dossier logs.
